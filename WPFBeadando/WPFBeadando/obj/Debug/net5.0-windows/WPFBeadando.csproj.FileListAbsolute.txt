@@ -20,3 +20,7 @@ C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackj
 C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\ref\WPFBeadando.dll
 C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\WPFBeadando.pdb
 C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\WPFBeadando.genruntimeconfig.cache
+C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\bin\Debug\net5.0-windows\CsvHelper.dll
+C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\GetName.g.cs
+C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\GetName.baml
+C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\WPFBeadando.csproj.CopyComplete

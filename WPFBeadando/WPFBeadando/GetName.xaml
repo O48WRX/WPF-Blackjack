@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFBeadando"
         mc:Ignorable="d"
-        Title="GetName" Height="200" Width="400">
+        Title="GetName" Height="200" Width="200">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Label Content="Add meg a neved!" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

@@ -24,5 +24,11 @@ namespace WPFBeadando
         {
             InitializeComponent();
         }
+
+        private void GameStart_Click(object sender, RoutedEventArgs e)
+        {
+            GetName namewindow = new GetName();
+            namewindow.Show();
+        }
     }
 }

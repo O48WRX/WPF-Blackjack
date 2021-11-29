@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFBeadando"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="500">
+        Title="MainWindow" Height="400" Width="500"
+        Background="#3D3D3D">
     <Grid>
-        <Button x:Name="Exit" Content="Kilépés" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top" Height="46" Width="120"/>
-        <Button x:Name="Exit_Copy" Content="Ranglista" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Height="46" Width="120"/>
-        <Button x:Name="Exit_Copy1" Content="Játék" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Height="46" Width="120"/>
-        <Label Content="Blackjack" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Height="85" Width="228" FontSize="54"/>
+        <Button x:Name="Exit" Content="Kilépés" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030"/>
+        <Button x:Name="Leaderboard" Content="Ranglista" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030"/>
+        <Button x:Name="GameStart" Content="Játék" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="GameStart_Click"/>
+        <Label Content="Blackjack" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Height="85" Width="228" FontSize="54" Background="#303030"/>
         <Label Content="Kardos Zsolt (O48WRX)" HorizontalAlignment="Left" Margin="23,348,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
