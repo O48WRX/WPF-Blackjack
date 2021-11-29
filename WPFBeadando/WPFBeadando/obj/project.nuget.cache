@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LtWuyQ4aiTjaTOnPceVgTllORJolpuAxRoVdw3R6FMt+sPq4up91pIb5vnlSTfUgE5Y0H6aB/o/jSlLVAq27HA==",
+  "dgSpecHash": "Q0QTufr814G9LF9lGySZDHDW2x6NMzrweVTu7cpqq0uJzsX6O3DYGTdu80aDO1vAFttsyPZvW3JNsgdBVhDBhg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kardy\\Desktop\\Egyetem\\Programozási környezetek\\WPFBlackjack\\WPFBlackjack\\WPFBeadando\\WPFBeadando\\WPFBeadando.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\kardy\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+  ],
   "logs": []
 }
