@@ -20,7 +20,8 @@ namespace WPFBeadando
     /// </summary>
     public partial class MainWindow : Window
     {
-        string PlayerName;
+        string playerName;
+        int score;
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +31,17 @@ namespace WPFBeadando
         {
             GetName namewindow = new GetName();
             namewindow.Show();
+        }
+
+        private void Leaderboard_Click(object sender, RoutedEventArgs e)
+        {
+            Leaderboard scores = new Leaderboard();
+            scores.Show();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
