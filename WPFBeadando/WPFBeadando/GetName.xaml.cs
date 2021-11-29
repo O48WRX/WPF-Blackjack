@@ -28,8 +28,14 @@ namespace WPFBeadando
 
         private void GN_Submit_Click(object sender, RoutedEventArgs e)
         {
+            if (GN_Name.Text == String.Empty)
+            {
+                MessageBox.Show("Nem lehet üres a doboz!");
+                return;
+            }
             string data = GN_Name.Text;
             transferDel.Invoke(data);
+            this.Close();
         }
     }
 }

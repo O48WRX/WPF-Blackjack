@@ -26,3 +26,5 @@ C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackj
 C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\WPFBeadando.csproj.CopyComplete
 C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\Leaderboard.g.cs
 C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\Leaderboard.baml
+C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\GameWindow.g.cs
+C:\Users\kardy\Desktop\Egyetem\Programozási környezetek\WPFBlackjack\WPFBlackjack\WPFBeadando\WPFBeadando\obj\Debug\net5.0-windows\GameWindow.baml

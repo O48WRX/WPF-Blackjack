@@ -1,20 +1,22 @@
-﻿<Window x:Class="WPFBeadando.GameWindow"
+﻿<Window x:Name="GW_Window" x:Class="WPFBeadando.GameWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFBeadando"
         mc:Ignorable="d"
-        Title="GameWindow" Height="450" Width="800">
+        Title="GameWindow" Height="450" Width="800"
+        Background="#3D3D3D">
     <Grid>
-        <TextBox x:Name="GW_DealerHand" HorizontalAlignment="Left" Margin="67,80,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="37"/>
-        <TextBox x:Name="GW_PlayerHand" HorizontalAlignment="Left" Margin="67,242,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="37"/>
-        <Button x:Name="GW_Check" Content="Megjátszás" HorizontalAlignment="Left" Margin="511,242,0,0" VerticalAlignment="Top" Height="37" Width="215"/>
-        <Button x:Name="GW_Throw" Content="Bedobás" HorizontalAlignment="Left" Margin="511,305,0,0" VerticalAlignment="Top" Height="37" Width="215"/>
-        <Button x:Name="GW_Call" Content="Hívás" HorizontalAlignment="Left" Margin="67,303,0,0" VerticalAlignment="Top" Height="39" Width="110"/>
-        <Button x:Name="GW_Double" Content="Duplázás" HorizontalAlignment="Left" Margin="290,303,0,0" VerticalAlignment="Top" Height="39" Width="110"/>
-        <Label Content="Játékos kártyái" HorizontalAlignment="Left" Margin="67,0,0,0" VerticalAlignment="Center" Height="32" Width="136"/>
-        <Label Content="Dealer Kártyái" HorizontalAlignment="Left" Margin="67,43,0,0" VerticalAlignment="Top" Height="32" Width="136"/>
+        <TextBox x:Name="GW_DealerHand" HorizontalAlignment="Left" Margin="67,80,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="37" Background="#303030" Foreground="#FFFFFF"/>
+        <TextBox x:Name="GW_PlayerHand" HorizontalAlignment="Left" Margin="67,242,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Height="37" Background="#303030" Foreground="#FFFFFF"/>
+        <Button x:Name="GW_Check" Content="Megjátszás" HorizontalAlignment="Left" Margin="511,242,0,0" VerticalAlignment="Top" Height="37" Width="215" Background="#303030" Foreground="#FFFFFF"/>
+        <Button x:Name="GW_Throw" Content="Bedobás" HorizontalAlignment="Left" Margin="511,305,0,0" VerticalAlignment="Top" Height="37" Width="215" Background="#303030" Foreground="#FFFFFF"/>
+        <Button x:Name="GW_Call" Content="Hívás" HorizontalAlignment="Left" Margin="67,303,0,0" VerticalAlignment="Top" Height="39" Width="110" Background="#303030" Foreground="#FFFFFF"/>
+        <Button x:Name="GW_Double" Content="Duplázás" HorizontalAlignment="Left" Margin="290,303,0,0" VerticalAlignment="Top" Height="39" Width="110" Background="#303030" Foreground="#FFFFFF"/>
+        <Label Content="Játékos kártyái" HorizontalAlignment="Left" Margin="67,0,0,0" VerticalAlignment="Center" Height="32" Width="136" Foreground="#FFFFFF"/>
+        <Label Content="Dealer Kártyái" HorizontalAlignment="Left" Margin="67,43,0,0" VerticalAlignment="Top" Height="32" Width="136" Foreground="#FFFFFF"/>
+        <Button x:Name="GW_Back" Content="Vissza" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Height="34" Width="99" Background="#303030" Foreground="#FFFFFF" Click="GW_Back_Click"/>
 
     </Grid>
 </Window>

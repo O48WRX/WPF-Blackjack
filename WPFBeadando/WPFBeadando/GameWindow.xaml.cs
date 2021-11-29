@@ -19,9 +19,17 @@ namespace WPFBeadando
     /// </summary>
     public partial class GameWindow : Window
     {
-        public GameWindow()
+        public HideTransfer hideIt;
+        public GameWindow(HideTransfer hide)
         {
             InitializeComponent();
+            hideIt = hide;
+        }
+
+        private void GW_Back_Click(object sender, RoutedEventArgs e)
+        {
+            hideIt.Invoke();
+            this.Close();
         }
     }
 }
