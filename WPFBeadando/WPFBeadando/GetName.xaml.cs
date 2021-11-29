@@ -19,9 +19,17 @@ namespace WPFBeadando
     /// </summary>
     public partial class GetName : Window
     {
-        public GetName()
+        DataTransfer transferDel;
+        public GetName(DataTransfer del)
         {
             InitializeComponent();
+            transferDel = del;
+        }
+
+        private void GN_Submit_Click(object sender, RoutedEventArgs e)
+        {
+            string data = GN_Name.Text;
+            transferDel.Invoke(data);
         }
     }
 }
