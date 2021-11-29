@@ -20,6 +20,7 @@ namespace WPFBeadando
     /// </summary>
     public partial class MainWindow : Window
     {
+        string PlayerName;
         public MainWindow()
         {
             InitializeComponent();
