@@ -8,9 +8,9 @@
         Title="GetName" Height="200" Width="200"
         Background="#3D3D3D">
     <Grid>
-        <TextBox x:Name="GN_Name" HorizontalAlignment="Center" Text="(Írd ide)" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#383838"/>
-        <Label Content="Add meg a neved!" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="GN_Submit" Content="Ok" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Background="#383838" Click="GN_Submit_Click"/>
+        <TextBox x:Name="GN_Name" HorizontalAlignment="Center" Text="(Írd ide)" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#383838" Foreground="#FFF"/>
+        <Label Content="Add meg a neved!" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Foreground="#FFF"/>
+        <Button x:Name="GN_Submit" Content="Ok" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Background="#383838" Click="GN_Submit_Click" Foreground="#FFF"/>
 
     </Grid>
 </Window>

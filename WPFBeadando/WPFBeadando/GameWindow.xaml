@@ -16,7 +16,7 @@
         <Button x:Name="GW_Double" Content="Duplázás" HorizontalAlignment="Left" Margin="290,303,0,0" VerticalAlignment="Top" Height="39" Width="110" Background="#303030" Foreground="#FFFFFF"/>
         <Label Content="Játékos kártyái" HorizontalAlignment="Left" Margin="67,0,0,0" VerticalAlignment="Center" Height="32" Width="136" Foreground="#FFFFFF"/>
         <Label Content="Dealer Kártyái" HorizontalAlignment="Left" Margin="67,43,0,0" VerticalAlignment="Top" Height="32" Width="136" Foreground="#FFFFFF"/>
-        <Button x:Name="GW_Back" Content="Vissza" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Height="34" Width="99" Background="#303030" Foreground="#FFFFFF" Click="GW_Back_Click"/>
+        <Button x:Name="GW_Back" Content="Vissza" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Height="34" Width="99" Background="#303030" Foreground="#FFFFFF" Click="GW_Back_Click"/>
 
     </Grid>
 </Window>

@@ -50,7 +50,7 @@ namespace WPFBeadando
 
         private void Leaderboard_Click(object sender, RoutedEventArgs e)
         {
-            Leaderboard scores = new Leaderboard();
+            Leaderboard scores = new Leaderboard(showDelegate);
             scores.Show();
             this.Hide();
         }

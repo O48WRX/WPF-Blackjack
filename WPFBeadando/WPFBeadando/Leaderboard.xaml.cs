@@ -19,9 +19,17 @@ namespace WPFBeadando
     /// </summary>
     public partial class Leaderboard : Window
     {
-        public Leaderboard()
+        public HideTransfer hideIt;
+        public Leaderboard(HideTransfer hide)
         {
             InitializeComponent();
+            hideIt += hide;
+        }
+
+        private void LB_Back_Click(object sender, RoutedEventArgs e)
+        {
+            hideIt.Invoke();
+            this.Close();
         }
     }
 }

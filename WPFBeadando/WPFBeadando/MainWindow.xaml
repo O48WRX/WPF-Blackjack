@@ -8,10 +8,10 @@
         Title="MainWindow" Height="400" Width="500"
         Background="#3D3D3D">
     <Grid>
-        <Button x:Name="Exit" Content="Kilépés" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="Exit_Click" Foreground="#FFFFFF"/>
+        <Button x:Name="Exit" Content="Kilépés" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="Exit_Click" Foreground="#FFFFFF"/>
         <Button x:Name="Leaderboard" Content="Ranglista" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="Leaderboard_Click" Foreground="#FFFFFF"/>
-        <Button x:Name="GameStart" Content="Játék" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="GameStart_Click" Foreground="#FFFFFF"/>
+        <Button x:Name="GameStart" Content="Játék" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="GameStart_Click" Foreground="#FFFFFF"/>
         <Label Content="Blackjack" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Height="85" Width="228" FontSize="54" Background="#303030" Foreground="#FFFFFF"/>
-        <Label Content="Kardos Zsolt (O48WRX)" HorizontalAlignment="Left" Margin="23,348,0,0" VerticalAlignment="Top" Foreground="#FFFFFF"/>
+        <Label Content="Kardos Zsolt (O48WRX)" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Foreground="#FFFFFF"/>
     </Grid>
 </Window>
