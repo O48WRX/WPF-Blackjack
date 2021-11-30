@@ -69,7 +69,7 @@ namespace WPFBeadando {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFBeadando;component/leaderboard.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFBeadando;V1.0.0.0;component/leaderboard.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Leaderboard.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
