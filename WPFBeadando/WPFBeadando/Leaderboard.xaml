@@ -8,7 +8,7 @@
         Title="Leaderboard" Height="450" Width="800"
         Background="#3D3D3D">
     <Grid>
-        <DataGrid x:Name="LB_Scores" Margin="230,10,230,0"/>
+        <DataGrid x:Name="LB_Scores" Margin="230,10,230,0" AutoGenerateColumns ="True"/>
         <Button x:Name="LB_Back" Content="Vissza" HorizontalAlignment="Left" Margin="65,204,0,0" VerticalAlignment="Top" Height="37" Width="84" Click="LB_Back_Click"/>
 
     </Grid>

@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using CsvHelper.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -31,16 +32,17 @@ namespace WPFBeadando
             if (File.Exists("Leaderboard.csv"))
             {
 
-
+                var config = new CsvConfiguration(CultureInfo.CurrentCulture) { Delimiter = ";", Encoding = Encoding.UTF8 };
                 using (var reader = new StreamReader("Leaderboard.csv"))
-                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                using (var csv = new CsvReader(reader, config))
                 {
                     var anonymousTypeDefinition = new
                     {
                         Name = String.Empty,
                         Score = default(int)
                     };
-                    records = csv.GetRecords(anonymousTypeDefinition);
+                    records = csv.GetRecords(anonymousTypeDefinition).ToList();
+                    LB_Scores.ItemsSource = (IEnumerable<object>)records;
                 }
             }
         }

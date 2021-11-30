@@ -101,9 +101,9 @@ namespace WPFBeadando
 
             if (!File.Exists("Leaderboard.csv"))
             {
-
+                var config1 = new CsvConfiguration(CultureInfo.CurrentCulture) { Delimiter = ";", Encoding = Encoding.UTF8 };
                 using (var writer = new StreamWriter("Leaderboard.csv"))
-                using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                using (var csv = new CsvWriter(writer, config1))
                 {
                     csv.WriteRecords(records);
                 }
@@ -113,6 +113,7 @@ namespace WPFBeadando
             {
                 // Don't write the header again.
                 HasHeaderRecord = false,
+                Delimiter = ";"
             };
 
             using (var stream = File.Open("Leaderboard.csv", FileMode.Append))
