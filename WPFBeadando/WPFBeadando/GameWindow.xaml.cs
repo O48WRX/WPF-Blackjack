@@ -163,6 +163,8 @@ namespace WPFBeadando
         {
             GW_DealerHand.Text = "";
             GW_PlayerHand.Text = "";
+            wonTokens -= activeBet;
+            GW_Score.Text = wonTokens.ToString();
             if (playerTokens == 0 || playerTokens < 0)
             {
                 GameLost();

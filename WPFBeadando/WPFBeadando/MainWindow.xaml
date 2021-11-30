@@ -13,5 +13,10 @@
         <Button x:Name="GameStart" Content="Játék" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Height="46" Width="120" Background="#303030" Click="GameStart_Click" Foreground="#FFFFFF"/>
         <Label Content="Blackjack" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" Height="85" Width="228" FontSize="54" Background="#303030" Foreground="#FFFFFF"/>
         <Label Content="Kardos Zsolt (O48WRX)" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Foreground="#FFFFFF"/>
+        <TextBox x:Name="MW_PlayerName" HorizontalAlignment="Left" Margin="24,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#303030" Foreground="#FFFFFF"/>
+        <TextBox x:Name="MW_PlayerScores" HorizontalAlignment="Left" Margin="173,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#303030" Foreground="#FFFFFF"/>
+        <Label Content="Játékos" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FFFFFF"/>
+        <Label Content="Pontok" HorizontalAlignment="Left" Margin="160,0,0,0" VerticalAlignment="Top" Foreground="#FFFFFF"/>
+        <Button x:Name="MW_SaveScores" Content="Mentsd a pontjaim" HorizontalAlignment="Left" Margin="334,23,0,0" VerticalAlignment="Top" Height="21" Width="144" Background="#303030" Foreground="#FFFFFF" Click="MW_SaveScores_Click"/>
     </Grid>
 </Window>
