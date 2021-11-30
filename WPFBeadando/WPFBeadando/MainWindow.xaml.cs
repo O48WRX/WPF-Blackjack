@@ -17,6 +17,7 @@ namespace WPFBeadando
 {
     public delegate void DataTransfer(string data);
     public delegate void HideTransfer();
+    public delegate void ScoreTransfer(int score);
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -24,6 +25,7 @@ namespace WPFBeadando
     {
         public DataTransfer transferDelegate;
         public HideTransfer showDelegate;
+        public ScoreTransfer scoreDelegate;
         public string playerName = "";
         public int score;
 
@@ -32,6 +34,7 @@ namespace WPFBeadando
             InitializeComponent();
             transferDelegate += new DataTransfer(SetName);
             showDelegate += new HideTransfer(ShowThisWindow);
+            scoreDelegate += new ScoreTransfer(SetScore);
         }
 
         private void GameStart_Click(object sender, RoutedEventArgs e)
@@ -43,7 +46,7 @@ namespace WPFBeadando
                 namewindow.Show();
                 return;
             }
-            GameWindow gw = new GameWindow(showDelegate);
+            GameWindow gw = new GameWindow(showDelegate, scoreDelegate);
             gw.Show();
             this.Hide();
         }
@@ -68,6 +71,11 @@ namespace WPFBeadando
         public void ShowThisWindow()
         {
             this.Show();
+        }
+
+        public void SetScore(int score)
+        {
+            this.score = score;
         }
     }
 }

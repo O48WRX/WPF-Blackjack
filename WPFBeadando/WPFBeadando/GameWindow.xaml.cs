@@ -21,6 +21,7 @@ namespace WPFBeadando
     {
         public Random rnd = new Random();
         public HideTransfer hideIt;
+        public ScoreTransfer scoreThis;
 
         public int[] deck = new int[] {2,3,4,5,6,7,8,9,10,10,10,10,
                                        2,3,4,5,6,7,8,9,10,10,10,10,
@@ -35,10 +36,11 @@ namespace WPFBeadando
 
         public List<int> playerCards = new List<int>();
         public List<int> dealerCards = new List<int>();
-        public GameWindow(HideTransfer hide)
+        public GameWindow(HideTransfer hide, ScoreTransfer playerScore)
         {
             InitializeComponent();
             hideIt = hide;
+            scoreThis = playerScore;
             GW_PlayerHand.IsReadOnly = true;
             GW_DealerHand.IsReadOnly = true;
             GW_Tokens.IsReadOnly = true;
@@ -49,6 +51,8 @@ namespace WPFBeadando
         private void GW_Back_Click(object sender, RoutedEventArgs e)
         {
             hideIt.Invoke();
+            if (wonTokens != 0)
+                scoreThis.Invoke(wonTokens);
             this.Close();
         }
 
@@ -64,6 +68,7 @@ namespace WPFBeadando
             activeBet = 0;
             GW_BetBox.Text = "(Írjon ide számot!)";
             GW_Bet.IsEnabled = true;
+            GW_Double.IsEnabled = true;
 
             playerCards.Clear();
             dealerCards.Clear();
@@ -158,6 +163,11 @@ namespace WPFBeadando
         {
             GW_DealerHand.Text = "";
             GW_PlayerHand.Text = "";
+            if (playerTokens == 0 || playerTokens < 0)
+            {
+                GameLost();
+                return;
+            }
             StartGame();
             wonTokens -= activeBet;
             GW_Score.Text = wonTokens.ToString();
@@ -195,7 +205,91 @@ namespace WPFBeadando
             if (activeBet == 0)
             {
                 MessageBox.Show("Nincs aktív tét!");
+                return;
             }
+
+            GW_DealerHand.Text = "";
+
+            foreach (int number in dealerCards)
+            {
+                GW_DealerHand.AppendText(number + ", ");
+            }
+
+
+            if (CountCards(dealerCards) > CountCards(playerCards))
+            {
+                MessageBox.Show("Elvesztette a kört, és a tétet!");
+                RoundLost();
+                return;
+            }
+
+            while (CountCards(dealerCards) <= 21 || CountCards(dealerCards) < CountCards(playerCards))
+            {
+                if (CountCards(dealerCards) > CountCards(playerCards))
+                {
+                    break;
+                }
+                int card = DrawRandomCard(deck);
+                dealerCards.Add(card);
+                GW_DealerHand.AppendText(card.ToString());
+                GW_DealerHand.AppendText(", ");
+            }
+
+            if (CountCards(dealerCards) > CountCards(playerCards) && CountCards(dealerCards) <= 21)
+            {
+                MessageBox.Show("Elvesztette a kört, és a tétet!");
+                RoundLost();
+                return;
+            }
+
+            if (CountCards(dealerCards) == CountCards(playerCards) && CountCards(dealerCards) <= 21)
+            {
+                MessageBox.Show("Megnyerte a kört, és megnyerte a tét dupláját!");
+                RoundWon();
+                return;
+            }
+
+            if (CountCards(dealerCards) > 21)
+            {
+                MessageBox.Show("Megnyerte a kört, és megnyerte a tét dupláját!");
+                RoundWon();
+                return;
+            }
+        }
+
+        private void GW_Double_Click(object sender, RoutedEventArgs e)
+        {
+            if (activeBet == 0)
+            {
+                MessageBox.Show("Nincs aktív tét!");
+                return;
+            }
+
+            if (playerTokens - activeBet < 0)
+            {
+                MessageBox.Show("A duplázás lehetetlenné tenné a játék folytatását!");
+                return;
+            }
+
+            playerTokens -= activeBet;
+            GW_Tokens.Text = activeBet.ToString();
+            activeBet += activeBet;
+            GW_BetBox.Text = activeBet.ToString();
+
+            GW_Double.IsEnabled = false;
+        }
+
+        private void GameLost()
+        {
+            MessageBox.Show("Elvesztette a játékot, ezzel a pontjait is!");
+            scoreThis.Invoke(wonTokens);
+            GW_DealerHand.Text = "";
+            GW_PlayerHand.Text = "";
+            StartGame();
+            playerTokens = 1000;
+            GW_Tokens.Text = playerTokens.ToString();
+            wonTokens = 0;
+            GW_Score.Text = wonTokens.ToString();
         }
     }
 }
