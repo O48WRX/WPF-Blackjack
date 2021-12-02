@@ -19,8 +19,13 @@ using System.Windows.Shapes;
 
 namespace WPFBeadando
 {
+    //Delegate a név átadására a GetName formról a főmenü számára.
     public delegate void DataTransfer(string data);
+
+    //Delegate a főmenü eltüntetésének figyelésére.
     public delegate void HideTransfer();
+
+    //Delegate a score átadására a GameWindow-ról
     public delegate void ScoreTransfer(int score);
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -45,6 +50,8 @@ namespace WPFBeadando
 
         private void GameStart_Click(object sender, RoutedEventArgs e)
         {
+            //Ha nincs megadva játékos név akkor
+            //Nyissa meg a GetName formot, hogy megkaphassa a delegate-el.
             if (playerName == String.Empty)
             {
                 GetName namewindow = new GetName(transferDelegate);
@@ -52,6 +59,8 @@ namespace WPFBeadando
                 namewindow.Show();
                 return;
             }
+            //Ha már megvan a név, akkor elindítja a játékot 
+            //Átadjuk a 2 delegatet paraméterként, hogy átadhassunk a 2 form között adatot.
             GameWindow gw = new GameWindow(showDelegate, scoreDelegate);
             gw.Show();
             this.Hide();
@@ -69,23 +78,28 @@ namespace WPFBeadando
             System.Windows.Application.Current.Shutdown();
         }
 
+        //Metódus a delegate.Invoke() számára, hogy átadhassuk a nevet a főmenünek.
         public void SetName(string name)
         {
             playerName = name;
             MW_PlayerName.Text = playerName;
         }
 
+        //Delegate metódus
         public void ShowThisWindow()
         {
             this.Show();
         }
 
+        //Delegate metódus
         public void SetScore(int score)
         {
             this.score = score;
             MW_PlayerScores.Text = this.score.ToString();
         }
 
+
+        //Metódus a CSVHelper segítségével létrehozunk egy '.csv' fájlt, amiben tárolhatjuk a játékos adatait.
         private void MW_SaveScores_Click(object sender, RoutedEventArgs e)
         {
             if (playerName == "" || score == 0)
