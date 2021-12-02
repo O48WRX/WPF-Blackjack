@@ -19,6 +19,7 @@ namespace WPFBeadando
     /// </summary>
     public partial class GetName : Window
     {
+        //Delegate létrehozása, hogy átadhassuk a nevet a főmenünek.
         DataTransfer transferDel;
         public GetName(DataTransfer del)
         {
@@ -28,6 +29,7 @@ namespace WPFBeadando
 
         private void GN_Submit_Click(object sender, RoutedEventArgs e)
         {
+            //Ha nemm üres a név mező, akkor átadja a főmenünek.
             if (GN_Name.Text == String.Empty)
             {
                 MessageBox.Show("Nem lehet üres a doboz!");

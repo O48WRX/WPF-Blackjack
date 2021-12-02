@@ -23,12 +23,16 @@ namespace WPFBeadando
     /// </summary>
     public partial class Leaderboard : Window
     {
+        //Rekord lista, hogy átadhassuk a '.csv' fájl adatait a DataGrid-nek.
         public object records = new List<object>();
+
+        //Delegate a főmenü elrejtéséhez.
         public HideTransfer hideIt;
         public Leaderboard(HideTransfer hide)
         {
             InitializeComponent();
             hideIt += hide;
+            //CSVHelper-es beolvasás.
             if (File.Exists("Leaderboard.csv"))
             {
 
