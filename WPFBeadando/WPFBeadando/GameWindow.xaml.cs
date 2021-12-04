@@ -241,6 +241,7 @@ namespace WPFBeadando
                 return;
             }
 
+            //A dealer kártyái textbox frissítése.
             GW_DealerHand.Text = "";
 
             foreach (int number in dealerCards)
@@ -248,7 +249,7 @@ namespace WPFBeadando
                 GW_DealerHand.AppendText(number + ", ");
             }
 
-
+            //Ha a dealer kártyáinak értéke nagyobb mint a játékosé, akkor elveszíti a kört a játékos
             if (CountCards(dealerCards) > CountCards(playerCards))
             {
                 MessageBox.Show("Elvesztette a kört, és a tétet!");
@@ -256,7 +257,9 @@ namespace WPFBeadando
                 return;
             }
 
-            while (CountCards(dealerCards) <= 21 || CountCards(dealerCards) < CountCards(playerCards))
+            //Ameddig a dealer kártyáinak értéke kisebbb mint 21 VAGY kisebbb az értéke a játékos kártyáinál
+            //Húz több kártyát, ha nagyobb lesz az értéke a játékosénál akkor a játékos veszít, ha túlmegy, akkor a játékos nyer.
+            while (CountCards(dealerCards) < 21 || CountCards(dealerCards) < CountCards(playerCards))
             {
                 if (CountCards(dealerCards) > CountCards(playerCards))
                 {
@@ -268,6 +271,7 @@ namespace WPFBeadando
                 GW_DealerHand.AppendText(", ");
             }
 
+            //Ciklus utáni újratesztelés.
             if (CountCards(dealerCards) > CountCards(playerCards) && CountCards(dealerCards) <= 21)
             {
                 MessageBox.Show("Elvesztette a kört, és a tétet!");
@@ -275,6 +279,8 @@ namespace WPFBeadando
                 return;
             }
 
+            //Ha egyenlőek az értékek és a dealer kártyáinak értéke kisebb vagy egyenlő 21-el akkor:
+            //A round egy 'push' azaz döntetlen. Egyes szabályok szerint győzelem.
             if (CountCards(dealerCards) == CountCards(playerCards) && CountCards(dealerCards) <= 21)
             {
                 MessageBox.Show("Megnyerte a kört, és megnyerte a tét dupláját!");
